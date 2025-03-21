@@ -2,8 +2,8 @@ import sqlite3
 from contextlib import asynccontextmanager
 from fastapi import FastAPI, HTTPException, Response
 
-from utils import check_if_project_exists, get_all_projects
-from models import Project
+from crud_api.utils import check_if_project_exists, get_all_projects
+from crud_api.models import Project
 
 @asynccontextmanager
 async def sqlite_lifespan(app: FastAPI):
