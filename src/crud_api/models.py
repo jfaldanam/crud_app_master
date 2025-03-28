@@ -17,6 +17,13 @@ class Project(BaseModel):
     @field_validator("time", mode="before")
     @classmethod
     def time_must_be_positive(cls, value):
+        """
+        This function checks if the time is negative, if it is, it defaults to zero"
+
+        :param value: The time of the project
+        :return: The time of the project, defaulting to zero if negative
+        """
+
         if isinstance(value, int):
             if value < 0:
                 print("WARNING, the time of a project cant be negative, defaulting to zero")
