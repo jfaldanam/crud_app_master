@@ -35,3 +35,17 @@ Then to run the API use:
 ```
 $ docker run -p 8000:8000 -v ./database:/db crud_api:latest
 ```
+
+# Development tips
+To develop on this project there are additional tooling to support tests.
+
+You can install them with:
+```
+$ pip install -e ".[dev]"
+```
+
+Then you can run the tests:
+
+```
+$ pytest tests/
+```
